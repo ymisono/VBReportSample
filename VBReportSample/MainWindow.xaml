@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VBReportSample"
         mc:Ignorable="d"
-        Title="MainWindow" Height="370" Width="525">
+        Title="MainWindow" Height="400" Width="525">
     <Grid>
         <!--画像テスト-->
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
-            <Border BorderBrush="Black" BorderThickness="1" Padding="1" >
-                <Image Name="imageContainer" Width="256" Height="256" />
+            <Border BorderBrush="Black" BorderThickness="1" Padding="1" Width="256" Height="256" >
+                <Image Name="imageContainer" Height="256" />
             </Border>
             <Button Content="テスト用画像でExcelシートを作成" Click="CreateTestImage_Click" Margin="0 8 0 0" />
-            <Button Content="任意の画像でExcelシートを作成" Click="CreateOwnImage_Click" Margin="0 8" />
+            <Button Content="任意の画像でExcelシートを作成" Click="CreateOwnImage_Click" Margin="0 8 0 0" />
+            <Button Content="間違ったパスでExcelシートを開く" Click="TryToOpenVBReportFromWrongPath_Click" Margin="0 8" Foreground="Red" />
         </StackPanel>
     </Grid>
 </Window>
